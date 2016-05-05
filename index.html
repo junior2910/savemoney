@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <title>SaveMoney</title>
+
+    <link type="text/css" rel="stylesheet" href="css/estilo.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+
+
+			<div class="row" id="page1">
+				<div class="col s12 m12 l12">
+					<div class="intro">
+						<span class="titulo save">
+							Save'n Money </br>
+						</span>
+						<span class="sub">
+							A longo prazo, um simples café ou cerveja pode gerar um valor impressionante,<br/> veja com o Save Money o quanto é possível economizar.
+						</span>
+					</div>
+					<div class="row botao">
+						<div class="col s12 m12 l12">
+							<a class="white waves-effect waves-light btn-large blue-text text-darken-2" id="botao-comeco"><i class="material-icons right">send</i>Começar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id="page2">
+				<div class="col s12 m12 l12">
+					<div class="intro">
+						<span class="titulo">
+							Onde pode economizar? </br>
+						</span>
+						<span class="sub">
+							Nós escolhemos estas opções a partir dos mais costumeiros hábitos da maioria das pessoas, <br/>
+							Escolha o que deseja calcular:
+						</span>
+					</div>
+					<div class="row escolher">
+						<div class="col s12 m12 l12">
+
+				        <div class="col s12 m6">
+					        <div class="card-panel teal cerveja" id="botao-cerveja">
+					          <span class="white-text">Cerveja <i class="material-icons">send</i>
+					          </span>
+					        </div>
+					      </div>
+
+				        <div class="col s12 m6">
+					        <div class="card-panel teal cafe" id="botao-cafe">
+					          <span class="white-text">Café <i class="material-icons">send</i>
+					          </span>
+					        </div>
+					      </div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id="page-cafe">
+				<div class="col s12 m12 l12">
+					<div class="intro">
+						<span class="titulo">
+							O famoso café</br>
+						</span>
+						<span class="sub">
+							Tomar café para dar aquele animo durante o trabalho é de lei certo?</br>
+							Mas veja como ele também faz diferença no seu orçamento a longo prazo.
+						</span>
+					</div>
+					<div class="row calcular">
+						<div class="col s12 m12 l12">
+
+				        <div class="col s12 m6">
+					        <div class="card-panel white" >
+					          <span class="blue-text por-dia">Quantos anos de economia?</span>
+					          <form action="#" class="ano-cafe">
+
+									      <input name="group1" type="radio" id="5anoscafe" />
+									      <label for="5anoscafe" class="texto-espaco">5</label>
+									      <input name="group1" type="radio" id="10anoscafe"  />
+									      <label for="10anoscafe" class="texto-espaco">10</label>
+									      <input name="group1" type="radio" id="15anoscafe" />
+									      <label for="15anoscafe" class="texto-espaco">15</label>
+									      <input name="group1" type="radio" id="20anoscafe" />
+									      <label for="20anoscafe" class="texto-espaco">20</label>
+									      <input name="group1" type="radio" id="30anoscafe" />
+									      <label for="30anoscafe" class="texto-espaco">30</label>
+
+									  </form>
+					        </div>
+					      </div>
+
+				        <div class="col s12 m6">
+					        <div class="card-panel white" >
+					          <span class="blue-text por-dia">Quantos cafés por dia?</span>
+					          <form action="#" class="quanto-cafe">
+
+									      <input name="group2" type="radio" id="1cafe" />
+									      <label for="1cafe" class="texto-espaco">1</label>
+									      <input name="group2" type="radio" id="2cafe"  />
+									      <label for="2cafe" class="texto-espaco">2</label>
+									      <input name="group2" type="radio" id="3cafe" />
+									      <label for="3cafe" class="texto-espaco">3</label>
+									      <input name="group2" type="radio" id="4cafe" />
+									      <label for="4cafe" class="texto-espaco">4</label>
+									      <input name="group2" type="radio" id="5cafe" />
+									      <label for="5cafe" class="texto-espaco">5</label>
+									      <input name="group2" type="radio" id="10cafe" />
+									      <label for="10cafe" class="texto-espaco">10</label>
+
+									  </form>
+					        </div>
+					      </div>
+
+						</div>
+					</div>
+
+					<div class="row central">
+						<div class="col s12 m12 l12" style="margin-bottom: 20px;">
+							<a class=" teal lighten-5 waves-effect waves-light btn-large blue-text text-darken-2" id="botao-simular"><i class="material-icons right">send</i>Simular economia</a>
+						</div>
+						<div class="col s12 m12 l12" id="valor">
+							<div class="card-panel blue-grey darken-2">
+								<h1>R$<span id="valor-cafe">0</span> De economia</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+      <div class="row" id="page-cerveja">
+				<div class="col s12 m12 l12">
+					<div class="intro">
+						<span class="titulo">
+							A querida Cerveja</br>
+						</span>
+						<span class="sub">
+							Tomar café para dar aquele animo durante o trabalho é de lei certo?</br>
+							Mas veja como ele também faz diferença no seu orçamento a longo prazo.
+						</span>
+					</div>
+					<div class="row calcular">
+						<div class="col s12 m12 l12">
+
+				        <div class="col s12 m6">
+					        <div class="card-panel white" >
+					          <span class="blue-text por-dia">Quantos anos de economia?</span>
+					          <form action="#" class="ano-cafe">
+
+									      <input name="group1" type="radio" id="5anoscafe" />
+									      <label for="5anoscafe" class="texto-espaco">5</label>
+									      <input name="group1" type="radio" id="10anoscafe"  />
+									      <label for="10anoscafe" class="texto-espaco">10</label>
+									      <input name="group1" type="radio" id="15anoscafe" />
+									      <label for="15anoscafe" class="texto-espaco">15</label>
+									      <input name="group1" type="radio" id="20anoscafe" />
+									      <label for="20anoscafe" class="texto-espaco">20</label>
+									      <input name="group1" type="radio" id="30anoscafe" />
+									      <label for="30anoscafe" class="texto-espaco">30</label>
+
+									  </form>
+					        </div>
+					      </div>
+
+				        <div class="col s12 m6">
+					        <div class="card-panel white" >
+					          <span class="blue-text por-dia">Quantos cafés por dia?</span>
+					          <form action="#" class="quanto-cafe">
+
+									      <input name="group2" type="radio" id="1cafe" />
+									      <label for="1cafe" class="texto-espaco">1</label>
+									      <input name="group2" type="radio" id="2cafe"  />
+									      <label for="2cafe" class="texto-espaco">2</label>
+									      <input name="group2" type="radio" id="3cafe" />
+									      <label for="3cafe" class="texto-espaco">3</label>
+									      <input name="group2" type="radio" id="4cafe" />
+									      <label for="4cafe" class="texto-espaco">4</label>
+									      <input name="group2" type="radio" id="5cafe" />
+									      <label for="5cafe" class="texto-espaco">5</label>
+									      <input name="group2" type="radio" id="10cafe" />
+									      <label for="10cafe" class="texto-espaco">10</label>
+
+									  </form>
+					        </div>
+					      </div>
+
+						</div>
+					</div>
+
+					<div class="row central">
+						<div class="col s12 m12 l12" style="margin-bottom: 20px;">
+							<a class=" teal lighten-5 waves-effect waves-light btn-large blue-text text-darken-2" id="botao-simular"><i class="material-icons right">send</i>Simular economia</a>
+						</div>
+						<div class="col s12 m12 l12" id="valor">
+							<div class="card-panel blue-grey darken-2" style="background-color: #E67E22 !important">
+								<h1>R$<span id="valor-cerveja">0</span> De economia</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript">
+    	document.getElementById('botao-simular').onclick = function(){
+    		var radios_ano = document.getElementsByName("group1");
+		    for (var cont = 0; cont < radios_ano.length; cont++) {
+		        if (radios_ano[cont].checked) {
+		            console.log("Ano: " + cont);
+		            var select_ano = cont;
+		        }
+		    }
+
+		    var radios_quant = document.getElementsByName("group2");
+		    for (var i = 0; i < radios_quant.length; i++) {
+		        if (radios_quant[i].checked) {
+		            console.log("Quant: " + i);
+		            var select_quant = i;
+		        }
+		    }
+
+		    if((select_quant === 0) && (select_ano === 0)){
+		    	$('#valor-cafe').text("8.069,41");
+		    }else if ((select_quant === 0) && (select_ano === 1)) {
+          $('#valor-cafe').text("21.065,28");
+		    }else if ((select_quant === 0) && (select_ano === 2)) {
+          $('#valor-cafe').text("41.995,26");
+		    }else if ((select_quant === 0) && (select_ano === 3)) {
+          $('#valor-cafe').text("75.703,20");
+		    }else if ((select_quant === 0) && (select_ano === 4)) {
+          $('#valor-cafe').text("217.419,88");
+		    }
+
+
+        else if ((select_quant === 1) && (select_ano === 0)) {
+          $('#valor-cafe').text("16.138,82");
+		    }else if ((select_quant === 1) && (select_ano === 1)) {
+          $('#valor-cafe').text("42.130,56");
+		    }else if ((select_quant === 1) && (select_ano === 2)) {
+          $('#valor-cafe').text("83.990,52");
+		    }else if ((select_quant === 1) && (select_ano === 3)) {
+          $('#valor-cafe').text("151.406,39");
+		    }else if ((select_quant === 1) && (select_ano === 4)) {
+          $('#valor-cafe').text("434.839,75");
+		    }
+
+
+        else if ((select_quant === 2) && (select_ano === 0)) {
+          $('#valor-cafe').text("24.208,24");
+		    }else if ((select_quant === 2) && (select_ano === 1)) {
+          $('#valor-cafe').text("63.195,84");
+		    }else if ((select_quant === 2) && (select_ano === 2)) {
+          $('#valor-cafe').text("125.985,78");
+		    }else if ((select_quant === 2) && (select_ano === 3)) {
+          $('#valor-cafe').text("227.109,59");
+		    }else if ((select_quant === 2) && (select_ano === 4)) {
+          $('#valor-cafe').text("652.259,63");
+		    }
+
+
+        else if ((select_quant === 3) && (select_ano === 0)) {
+          $('#valor-cafe').text("32.277,65");
+		    }else if ((select_quant === 3) && (select_ano === 1)) {
+          $('#valor-cafe').text("84.261,13");
+		    }else if ((select_quant === 3) && (select_ano === 2)) {
+          $('#valor-cafe').text("167.981,04");
+		    }else if ((select_quant === 3) && (select_ano === 3)) {
+          $('#valor-cafe').text("302.812,79");
+		    }else if ((select_quant === 3) && (select_ano === 4)) {
+          $('#valor-cafe').text("869.679,51");
+		    }
+
+
+        else if ((select_quant === 4) && (select_ano === 0)) {
+          $('#valor-cafe').text("40.347,06");
+		    }else if ((select_quant === 4) && (select_ano === 1)) {
+          $('#valor-cafe').text("105.326,41");
+		    }else if ((select_quant === 4) && (select_ano === 2)) {
+          $('#valor-cafe').text("209.976,29");
+		    }else if ((select_quant === 4) && (select_ano === 3)) {
+          $('#valor-cafe').text("378.515,98");
+		    }else if ((select_quant === 4) && (select_ano === 4)) {
+          $('#valor-cafe').text("1.087.099,39");
+		    }
+
+
+        else if ((select_quant === 5) && (select_ano === 0)) {
+          $('#valor-cafe').text("80.694,12");
+		    }else if ((select_quant === 5) && (select_ano === 1)) {
+          $('#valor-cafe').text("210.652,82");
+		    }else if ((select_quant === 5) && (select_ano === 2)) {
+          $('#valor-cafe').text("419.952,59");
+		    }else if ((select_quant === 5) && (select_ano === 3)) {
+          $('#valor-cafe').text("757.031,97");
+		    }else if ((select_quant === 5) && (select_ano === 4)) {
+          $('#valor-cafe').text("2.174.198,77");
+		    }
+
+    	};
+    </script>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('#page2').hide();
+    		$('#page-cafe').hide();
+        $('#page-cerveja').hide();
+    		$('#valor').hide();
+
+
+    		$('#botao-comeco').click(function(){
+    			$('#page2').show('slow');
+    			$('#page1').hide('slow');
+    		});
+
+    		$('#botao-cafe').click(function(){
+    			$('#page-cafe').show('slow');
+    			$('#page2').hide('slow');
+    		});
+
+    		$('#botao-cerveja').click(function(){
+    			$('#page-cerveja').show('slow');
+    			$('#page2').hide('slow');
+    		});
+
+
+    		$('#botao-simular').click(function(){
+					$('#valor').show('slow');
+    		});
+    	});
+    </script>
+
+
+  </body>
+</html>

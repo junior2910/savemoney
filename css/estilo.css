@@ -1,0 +1,130 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+
+	height: 100%;
+}
+
+#page1{
+	width: 100%;
+	height: 100%;
+	background-color: #2980B9;
+	margin-bottom: 0px;
+}
+
+#page2{
+	width: 100%;
+	height: 100%;
+	background-color: #2ECC71;
+	margin-bottom: -20px;
+}
+
+#page-cafe{
+	width: 100%;
+	height: 100%;
+	background-color: #2C3E50;
+	margin-bottom: -20px;
+}
+
+#page-cerveja{
+	width: 100%;
+	height: 100%;
+	background-color: #F39C12;
+	margin-bottom: -20px;
+}
+
+.intro{
+
+	margin-top: 30px;
+	text-align: center;
+	color: #3CF;
+}
+
+.titulo{
+
+	font-size: 60px;
+	font-family: roboto light;
+	color: #f7f7f7;
+}
+
+.save{
+
+	font-size: 100px;
+}
+
+.sub{
+
+	font-size: 20px;
+	font-family: roboto light;
+	color: #f7f7f7;
+}
+
+.botao{
+
+	text-align: center;
+	margin-top: 100px;
+}
+
+.escolher{
+
+	margin-top: 100px;
+	text-align: center;
+}
+
+.calcular{
+
+	margin-top: 50px;
+	text-align: center;
+}
+
+.cerveja{
+
+	background-image: url('../img/cerveja.jpg');
+	background-position: center;
+	font-size: 40px;
+	height: 100px;
+	cursor: pointer;
+}
+
+.cafe{
+
+	background-image: url('../img/cafe.jpg');
+	background-position: center;
+	font-size: 40px;
+	height: 100px;
+	cursor: pointer;
+}
+
+.por-dia{
+
+	font-size: 20px;
+}
+
+.ano-cafe{
+	text-align: center;
+	margin-top: 20px;
+}
+.quanto-cafe{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.texto-espaco{
+
+	margin-right: 20px;
+}
+
+.central{
+
+	text-align: center;
+}
+
+h1{
+
+	font-size: 30px;
+	font-family: roboto light;
+	color: #f7f7f7
+}
