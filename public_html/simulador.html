@@ -1,0 +1,193 @@
+<html>
+	<head>
+			<title> Save'n Money</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" type="text/css" href="simulador.css">
+			<meta name="viewport" content="width=device-width, user-scalable=no">
+
+			<link rel="icon" href="img/logo-pequeno.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="img/logo-pequeno.png" type="image/x-icon"/>
+	</head>
+
+	<body>
+
+		<div class="container" id="principal">
+
+			<div class="logo">
+				<a href="index.html"><img src="img/logo-pequeno.png"></a>
+			</div>
+
+			<p> Com o que voce quer economizar?</p>
+
+			<div class="checkbox">
+			<input id="check1" type="radio" name="check" value="check1">
+			<label for="check1">Café</label>
+			<br>
+			<input id="check2" type="radio" name="check" value="check2">
+			<label for="check2">Cerveja</label>
+		</div>
+
+			<a href="#" id="btnPrincipal">
+				<div class="botao"> <p> Próximo</p></div>
+			</a>
+
+		</div>
+
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<div class="container" id="copos">
+
+			<div class="logo">
+				<a href="index.html"><img src="img/logo-pequeno.png"></a>
+			</div>
+
+			<p> Qual é a quantidade diária?</p>
+
+			<input type="number" id="unidade">
+
+			<a href="#" id="btnCopos">
+				<div class="botao"> <p> Próximo</p></div>
+			</a>
+
+		</div>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<div class="container" id="dias">
+
+			<div class="logo">
+				<a href="index.html"><img src="img/logo-pequeno.png"></a>
+			</div>
+
+			<p> Quantos anos de economia?</p>
+
+			<input type="number" id="anos">
+
+			<a href="#" id="botao-simular">
+				<div class="botao" style="width:30%;"> <p> Calcular economia</p></div>
+			</a>
+
+		</div>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<div class="container" id="economia">
+
+
+			<div class="logo">
+				<a href="index.html"><img src="img/logo-pequeno.png"></a>
+			</div>
+
+
+			<h3>Em <span id="numeroAnos">0</span> <span id="palavra">ano</span> você fará uma economia de R$ <span id="valor">0</span>,00.</h3>
+
+
+			<div class="subscribe">
+				<form action="MAILTO:juniorlisboaweb@gmail.com">
+				<p style="color:white"> Se inscreva para manter-se informado sobre o Save'n Money.</p>
+				<input type="text"><br/>
+				<input type="submit"  name="Enviar">
+			</form>
+			</div>
+
+		</div>
+
+
+		<div class="card">
+			<img src="img/cartoes.png">
+		</div>
+
+
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+
+	    <script type="text/javascript">
+	    	document.getElementById('botao-simular').onclick = function(){
+
+	    		var radios = document.getElementsByName("check");
+			    for (var cont = 0; cont < radios.length; cont++) {
+			        if (radios[cont].checked) {
+			            console.log("Tipo: " + cont);
+			            var select = cont;
+			        }
+			    }
+
+					if(select == 0){
+						var unidades = parseInt(document.getElementById('unidade').value);
+						console.log("Unidades: " + unidades);
+						var anos = parseInt(document.getElementById('anos').value);
+						console.log("Anos " + anos);
+
+						var umAno = 365 * unidades;
+						var todosOsAnos = umAno * anos;
+
+						var valorTotal = todosOsAnos * 5;
+						console.log("Valor: " + valorTotal);
+
+						var valorTotalStr = valorTotal.toString();
+						var localPonto = valorTotalStr.length - 3;
+						var resultado = valorTotalStr.substr(0, localPonto)+"."+valorTotalStr.substr(localPonto, valorTotalStr.length);
+
+
+						$('#valor').text(resultado);
+						$('#numeroAnos').text(anos);
+						if(anos > 1){
+							$('#palavra').text("anos");
+						}
+					}
+
+					if(select == 1){
+						var unidades = parseInt(document.getElementById('unidade').value);
+						console.log("Unidades: " + unidades);
+						var anos = parseInt(document.getElementById('anos').value);
+						console.log("Anos " + anos);
+
+						var umAno = 365 * unidades;
+						var todosOsAnos = umAno * anos;
+
+						var valorTotal = todosOsAnos * 10;
+						console.log("Valor: " + valorTotal);
+
+						var valorTotalStr = valorTotal.toString();
+						var localPonto = valorTotalStr.length - 3;
+						var resultado = valorTotalStr.substr(0, localPonto)+"."+valorTotalStr.substr(localPonto, valorTotalStr.length);
+
+
+						$('#valor').text(resultado);
+						$('#numeroAnos').text(anos);
+						if(anos > 1){
+							$('#palavra').text("anos");
+						}
+					}
+
+	    	};
+	    </script>
+
+	    <script type="text/javascript">
+	    	$(document).ready(function(){
+
+	    		$('#copos').hide();
+	    		$('#dias').hide();
+	        $('#economia').hide();
+
+	    		$('#btnPrincipal').click(function(){
+	    			$('#copos').show();
+	    			$('#principal').hide();
+	    		});
+
+	    		$('#btnCopos').click(function(){
+	    			$('#dias').show();
+	    			$('#copos').hide();
+	    		});
+
+	    		$('#botao-simular').click(function(){
+	    			$('#economia').show();
+	    			$('#dias').hide();
+	    		});
+
+	    	});
+	    </script>
+
+	</body>
+
+</html>
